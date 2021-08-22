@@ -17,6 +17,7 @@
 	background-color: var(--background);
 	height: 100vh;
 }
+
 /* Fine Common */
 /* -------------------------------------------------- */
 /* Inizio Header */
@@ -38,6 +39,10 @@
 	background-color: var(--primary);
 }
 
+.debug main .container-fluid {
+	background-color: var(--secondary);
+}
+
 .debug .header__image-box {
 	height: 100px;
 	width: 100px;
@@ -45,18 +50,36 @@
 }
 
 .debug .header__image-box_img {
-	height: 150%;
-	width: 150%;
+	height: 200%;
+	width: 200%;
+	position: relative;
+	top: -20px;
+	right: 45px;
 }
 
 .debug #burgerName {
 	font-size: 2rem;
-	background-color: var(--background);
+	background-color: var(--secondary);
 	border: none;
 	transition: none;
 }
 
 .debug #burgerName:focus {
 	box-shadow: none;
-	background-color: var(--secondary);
+	background-color: var(--background);
+}
+
+.debug .ingredients__image-box {
+	height: 60px;
+	width: 60px;
+}
+
+.debug .ingredients__checkbox {
+	background-color: var(--tertiary);
+	height: 15px;
+	width: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
 }
