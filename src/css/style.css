@@ -6,7 +6,8 @@
 
 :root {
 	--primary: #fdbb40;
-	--secondary: #d33359;
+	--secondary: #ffffff;
+	--tertiary: #d33359;
 	--background: #fff5e2;
 }
 
@@ -46,4 +47,16 @@
 .debug .header__image-box_img {
 	height: 150%;
 	width: 150%;
+}
+
+.debug #burgerName {
+	font-size: 2rem;
+	background-color: var(--background);
+	border: none;
+	transition: none;
+}
+
+.debug #burgerName:focus {
+	box-shadow: none;
+	background-color: var(--secondary);
 }
