@@ -3,9 +3,19 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+:root {
+	--primary: #fdbb40;
+	--secondary: #d33359;
+	--background: #fff5e2;
+}
+
 /* -------------------------------------------------- */
 /* Inizio Common */
-
+.wrapper {
+	background-color: var(--background);
+	height: 100vh;
+}
 /* Fine Common */
 /* -------------------------------------------------- */
 /* Inizio Header */
@@ -22,3 +32,18 @@
 /* -------------------------------------------------- */
 
 /* !DEBUG ZONE! */
+
+.debug header .container-fluid {
+	background-color: var(--primary);
+}
+
+.debug .header__image-box {
+	height: 100px;
+	width: 100px;
+	padding: 0;
+}
+
+.debug .header__image-box_img {
+	height: 150%;
+	width: 150%;
+}
