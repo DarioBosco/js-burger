@@ -69,6 +69,17 @@
 	background-color: var(--background);
 }
 
+.debug #discountCode {
+	background-color: var(--background);
+	border: none;
+	transition: none;
+}
+
+.debug #discountCode:focus {
+	box-shadow: none;
+	background-color: var(--secondary);
+}
+
 .debug .ingredients__image-box {
 	height: 60px;
 	width: 60px;
