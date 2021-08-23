@@ -18,10 +18,12 @@
 			<div class="container w-75">
 				<header>
 					<div class="container-fluid">
-						<div class="row justify-content-between align-items-center">
-							<h1 class="col-10">Create Your Burger</h1>
-							<div class="col-2 header__image-box">
-								<img class="header__image-box_img" src="./src/img/burger-top.png" alt="" />
+						<div class="offset">
+							<div class="row justify-content-between align-items-center">
+								<h1 class="col-10">Create Your Burger</h1>
+								<div class="col-2 header__image-box">
+									<img class="header__image-box_img" src="./src/img/burger-top.png" alt="" />
+								</div>
 							</div>
 						</div>
 					</div>
@@ -30,74 +32,76 @@
 				<!-- Inizio Main -->
 				<main>
 					<div class="container-fluid">
-						<div class="row">
-							<div class="col-5 my-5">
-								<input type="text" class="p-0 form-control" id="burgerName" placeholder="Name Your Burger" />
+						<div class="offset">
+							<div class="row">
+								<div class="col-5 my-5">
+									<input type="text" class="p-0 form-control" id="burgerName" placeholder="Name Your Burger" />
+								</div>
 							</div>
-						</div>
-						<div class="row">
-							<h2>Ingredients</h2>
-						</div>
-						<div class="row">
-							<ul class="list-unstyled pt-3 d-flex flex-wrap" id="ingredients">
-								<li id="cheese" class="col-6 py-2 d-flex align-items-center">
-									<div class="ingredients__image-box">
-										<img src="./src/img/cheese.svg" alt="" />
-									</div>
-									<div class="px-3">Cheese</div>
-									<div class="ingredients__checkbox"></div>
-									<div class="ps-3">add</div>
-								</li>
-								<li id="tomato" class="col-6 py-2 d-flex align-items-center">
-									<div class="ingredients__image-box">
-										<img src="./src/img/tomato.svg" alt="" />
-									</div>
-									<div class="px-3">Tomato</div>
-									<div class="ingredients__checkbox"></div>
-									<div class="ps-3">add</div>
-								</li>
-								<li id="egg" class="col-6 py-2 d-flex align-items-center">
-									<div class="ingredients__image-box">
-										<img src="./src/img/fried-egg.svg" alt="" />
-									</div>
-									<div class="px-3">Egg</div>
-									<div class="ingredients__checkbox"></div>
-									<div class="ps-3">add</div>
-								</li>
-								<li id="lettuce" class="col-6 py-2 d-flex align-items-center">
-									<div class="ingredients__image-box">
-										<img src="./src/img/lettuce.svg" alt="" />
-									</div>
-									<div class="px-3">Lettuce</div>
-									<div class="ingredients__checkbox"></div>
-									<div class="ps-3">add</div>
-								</li>
-								<li id="mustard" class="col-6 py-2 d-flex align-items-center">
-									<div class="ingredients__image-box">
-										<img src="./src/img/mustard.svg" alt="" />
-									</div>
-									<div class="px-3">Mustard</div>
-									<div class="ingredients__checkbox"></div>
-									<div class="ps-3">add</div>
-								</li>
-								<li id="ketchup" class="col-6 py-2 d-flex align-items-center">
-									<div class="ingredients__image-box">
-										<img src="./src/img/ketchup.svg" alt="" />
-									</div>
-									<div class="px-3">ketchup</div>
-									<div class="ingredients__checkbox"></div>
-									<div class="ps-3">add</div>
-								</li>
-							</ul>
-						</div>
-						<div class="row pb-4">
-							<label for="discountCode" class="col-2">Discount Coupon</label>
-							<div class="col">
-								<input type="text" class="form-control" id="discountCode" placeholder="12345ABCDEF" />
+							<div class="row">
+								<h2>Ingredients</h2>
 							</div>
-						</div>
-						<div class="row justify-content-center">
-							<button type="button" class="btn btn-primary col-2">calculate</button>
+							<div class="row">
+								<ul class="list-unstyled pt-3 d-flex flex-wrap" id="ingredients">
+									<li id="cheese" class="col-6 py-2 d-flex align-items-center">
+										<div class="ingredients__image-box">
+											<img src="./src/img/cheese.svg" alt="" />
+										</div>
+										<div class="px-3">Cheese</div>
+										<div class="ingredients__checkbox"></div>
+										<div class="ps-3">add</div>
+									</li>
+									<li id="tomato" class="col-6 py-2 d-flex align-items-center">
+										<div class="ingredients__image-box">
+											<img src="./src/img/tomato.svg" alt="" />
+										</div>
+										<div class="px-3">Tomato</div>
+										<div class="ingredients__checkbox"></div>
+										<div class="ps-3">add</div>
+									</li>
+									<li id="egg" class="col-6 py-2 d-flex align-items-center">
+										<div class="ingredients__image-box">
+											<img src="./src/img/fried-egg.svg" alt="" />
+										</div>
+										<div class="px-3">Egg</div>
+										<div class="ingredients__checkbox"></div>
+										<div class="ps-3">add</div>
+									</li>
+									<li id="lettuce" class="col-6 py-2 d-flex align-items-center">
+										<div class="ingredients__image-box">
+											<img src="./src/img/lettuce.svg" alt="" />
+										</div>
+										<div class="px-3">Lettuce</div>
+										<div class="ingredients__checkbox"></div>
+										<div class="ps-3">add</div>
+									</li>
+									<li id="mustard" class="col-6 py-2 d-flex align-items-center">
+										<div class="ingredients__image-box">
+											<img src="./src/img/mustard.svg" alt="" />
+										</div>
+										<div class="px-3">Mustard</div>
+										<div class="ingredients__checkbox"></div>
+										<div class="ps-3">add</div>
+									</li>
+									<li id="ketchup" class="col-6 py-2 d-flex align-items-center">
+										<div class="ingredients__image-box">
+											<img src="./src/img/ketchup.svg" alt="" />
+										</div>
+										<div class="px-3">ketchup</div>
+										<div class="ingredients__checkbox"></div>
+										<div class="ps-3">add</div>
+									</li>
+								</ul>
+							</div>
+							<div class="row pb-4">
+								<label for="discountCode" class="col-2">Discount Coupon</label>
+								<div class="col-4">
+									<input type="text" class="form-control" id="discountCode" placeholder="12345ABCDEF" />
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<button id="calculateBtn" type="button" class="btn btn-warning col-1 fw-bold">calculate</button>
+							</div>
 						</div>
 					</div>
 				</main>

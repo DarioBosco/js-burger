@@ -94,3 +94,7 @@
 	align-items: center;
 	font-size: 1.2rem;
 }
+
+.debug .offset {
+	padding-left: 50px;
+}
