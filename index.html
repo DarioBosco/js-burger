@@ -47,15 +47,15 @@
 										<div class="ingredients__image-box">
 											<img src="./src/img/cheese.svg" alt="" />
 										</div>
-										<div class="px-3">Cheese</div>
-										<div class="ingredients__checkbox"></div>
+										<div class="ingredients__name px-3">Cheese</div>
+										<div class="ingredients__checkbox" id="cheeseCheck"></div>
 										<div class="ps-3 ingredients__add-text">add</div>
 									</li>
 									<li id="tomato" class="col-6 py-2 d-flex align-items-center">
 										<div class="ingredients__image-box">
 											<img src="./src/img/tomato.svg" alt="" />
 										</div>
-										<div class="px-3">Tomato</div>
+										<div class="ingredients__name px-3">Tomato</div>
 										<div class="ingredients__checkbox"></div>
 										<div class="ps-3 ingredients__add-text">add</div>
 									</li>
@@ -63,7 +63,7 @@
 										<div class="ingredients__image-box">
 											<img src="./src/img/fried-egg.svg" alt="" />
 										</div>
-										<div class="px-3">Egg</div>
+										<div class="ingredients__name px-3">Egg</div>
 										<div class="ingredients__checkbox"></div>
 										<div class="ps-3 ingredients__add-text">add</div>
 									</li>
@@ -71,7 +71,7 @@
 										<div class="ingredients__image-box">
 											<img src="./src/img/lettuce.svg" alt="" />
 										</div>
-										<div class="px-3">Lettuce</div>
+										<div class="ingredients__name px-3">Lettuce</div>
 										<div class="ingredients__checkbox"></div>
 										<div class="ps-3 ingredients__add-text">add</div>
 									</li>
@@ -79,7 +79,7 @@
 										<div class="ingredients__image-box">
 											<img src="./src/img/mustard.svg" alt="" />
 										</div>
-										<div class="px-3">Mustard</div>
+										<div class="ingredients__name px-3">Mustard</div>
 										<div class="ingredients__checkbox"></div>
 										<div class="ps-3 ingredients__add-text">add</div>
 									</li>
@@ -87,7 +87,7 @@
 										<div class="ingredients__image-box">
 											<img src="./src/img/ketchup.svg" alt="" />
 										</div>
-										<div class="px-3">Ketchup</div>
+										<div class="ingredients__name px-3">Ketchup</div>
 										<div class="ingredients__checkbox"></div>
 										<div class="ps-3 ingredients__add-text">add</div>
 									</li>
@@ -100,7 +100,7 @@
 								</div>
 							</div>
 							<div class="row justify-content-center">
-								<button id="calculateBtn" type="button" class="btn btn-warning col-1 fw-bold">calculate</button>
+								<button onclick="calculateBurgerPrice()" id="calculateBtn" type="button" class="btn btn-warning col-1 fw-bold">calculate</button>
 							</div>
 						</div>
 					</div>
@@ -110,9 +110,9 @@
 				<footer>
 					<div class="container-fluid">
 						<div class="offset-1">
-							<div class="row justify-content-between align-items-center">
-								<h2 class="col-10">Your Price:</h2>
-								<h2 class="col-2">$</h2>
+							<div class="row align-items-center">
+								<h2 class="col-9">Your Price:</h2>
+								<h2 id="price" class="col-2">$</h2>
 							</div>
 						</div>
 					</div>
@@ -120,6 +120,7 @@
 				<!-- Fine Footer -->
 			</div>
 		</div>
+		<script src="./src/js/main.js"></script>
 		<!-- Bootstrap JS -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 	</body>

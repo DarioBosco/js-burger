@@ -86,6 +86,7 @@ main .container-fluid {
 	justify-content: center;
 	align-items: center;
 	font-size: 1.2rem;
+	cursor: pointer;
 }
 
 .ingredients__add-text {
