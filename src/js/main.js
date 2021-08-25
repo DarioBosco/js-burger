@@ -1,4 +1,5 @@
 const ingredients = [];
+const additionalIngredients = [];
 const ingredientsPrices = {
 	Cheese: 4,
 	Tomato: 3,
@@ -7,32 +8,33 @@ const ingredientsPrices = {
 	Mustard: 2,
 	Ketchup: 2,
 };
-var basePrice = 12;
-const additionalIngredients = [];
-
-getIngredients();
-console.log(ingredients);
-
+const basePrice = 12;
 var checkboxes = document.getElementsByClassName('ingredients__checkbox');
 
-var addCheck = function () {
-	var content = this.innerHTML;
-	var ingredientName = this.parentElement.children[1].innerHTML;
-	console.log(ingredientName);
-	if (content == '') {
-		this.innerHTML = '&#10003';
-		additionalIngredients.push(ingredientName);
-		console.log(additionalIngredients);
-	} else {
-		let index = additionalIngredients.indexOf(ingredientName);
-		this.innerHTML = '';
-		additionalIngredients.splice(index, 1);
-		console.log(additionalIngredients);
-	}
-};
+getIngredients();
+addCheckBoxes();
+console.log(ingredients);
 
-for (let i = 0; i < checkboxes.length; i++) {
-	checkboxes[i].addEventListener('click', addCheck);
+//Funzione per trovare le varie checkbox degli ingredienti e aggiungere o rimuovere la spunta. Aggiunge inoltre gli elementi selezionati ad additionalIngredients[]
+function addCheckBoxes() {
+	var addCheck = function () {
+		var content = this.innerHTML;
+		var ingredientName = this.parentElement.children[1].innerHTML;
+		if (content == '') {
+			this.innerHTML = '&#10003';
+			additionalIngredients.push(ingredientName);
+			console.log(additionalIngredients);
+		} else {
+			let index = additionalIngredients.indexOf(ingredientName);
+			this.innerHTML = '';
+			additionalIngredients.splice(index, 1);
+			console.log(additionalIngredients);
+		}
+	};
+
+	for (let i = 0; i < checkboxes.length; i++) {
+		checkboxes[i].addEventListener('click', addCheck);
+	}
 }
 
 // Funzione per ottenere gli ingredienti dal file HTML
@@ -45,5 +47,11 @@ function getIngredients() {
 }
 
 function calculateBurgerPrice() {
-	document.getElementById('price').innerHTML = '$' + (basePrice + additionalIngredients * 4);
+	var additionalPrice = 0;
+	//Ciclo all'interno dell'array additionalIngredients, andando poi
+	for (let i = 0; i < additionalIngredients.length; i++) {
+		const element = ingredientsPrices[additionalIngredients[i]];
+		additionalPrice += element;
+	}
+	document.getElementById('price').innerHTML = '$' + (basePrice + additionalPrice);
 }
