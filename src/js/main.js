@@ -1,5 +1,6 @@
 const ingredients = [];
 const additionalIngredients = [];
+const discountCodes = ['DISCOUNT5', 'BOOLEAN'];
 const ingredientsPrices = {
 	Cheese: 4,
 	Tomato: 3,
@@ -35,6 +36,7 @@ function addCheckBoxes() {
 	for (let i = 0; i < checkboxes.length; i++) {
 		checkboxes[i].addEventListener('click', addCheck);
 	}
+	return;
 }
 
 // Funzione per ottenere gli ingredienti dal file HTML
@@ -44,14 +46,36 @@ function getIngredients() {
 		const element = ingredientsList[i].innerHTML;
 		ingredients.push(element);
 	}
+	return ingredients;
 }
 
 function calculateBurgerPrice() {
-	var additionalPrice = 0;
-	//Ciclo all'interno dell'array additionalIngredients, andando poi
+	let additionalPrice = 0;
+	let discount = 0;
+	const discountCode = document.getElementById('discountCode').value;
+	let burgerName = document.getElementById('burgerName').value;
+
+	//Ciclo all'interno dell'array additionalIngredients, andando poi a sommare il valore di tutti gli ingredienti aggiuntivi
 	for (let i = 0; i < additionalIngredients.length; i++) {
 		const element = ingredientsPrices[additionalIngredients[i]];
 		additionalPrice += element;
 	}
-	document.getElementById('price').innerHTML = '$' + (basePrice + additionalPrice);
+
+	// Controllo se e' stato inserito un codice sconto valido. Per ovvie ragioni i codici sconto dovrebbero essere tenuti in un database.
+	if (discountCode != '' && discountCodes.includes(discountCode)) {
+		discount = 5;
+	}
+
+	while (burgerName == '') {
+		burgerName = prompt('Inserisci un nome per il panino');
+	}
+	const finalPrice = basePrice + additionalPrice - discount;
+	//Calcolo del prezzo finale
+	document.getElementById('price').innerHTML = '$' + finalPrice;
+
+	console.log('Nome del panino: ', burgerName);
+	console.log('Ingredienti aggiuntivi: ', additionalIngredients);
+	console.log('Codice sconto: ', discountCode);
+	console.log('Prezzo: ', finalPrice);
+	return finalPrice;
 }
