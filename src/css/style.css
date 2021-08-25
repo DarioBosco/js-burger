@@ -37,10 +37,17 @@
 
 .debug header .container-fluid {
 	background-color: var(--primary);
+	height: 100px;
 }
 
 .debug main .container-fluid {
 	background-color: var(--secondary);
+	height: calc(100vh - 200px);
+}
+
+.debug footer .container-fluid {
+	background-color: var(--tertiary);
+	height: 100px;
 }
 
 .debug .header__image-box {
